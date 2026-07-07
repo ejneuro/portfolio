@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <link rel="stylesheet" href="assets/css/all.min.css">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="stylesheet" href="assets/css/contact.css">
+  <title>Eugine Weks | Contact</title>
+</head>
+
+<body>
+  
+  <div id="scroll-line"></div>
+  <div class="header">
+    <img class="logo" src="./assets/img/logo.png">
+   <span id="lable">
+      Eugine Weks 
+    </span>
+        <i class="fas fa-sun theme-icon" id="themeToggle"></i>
+   </div>
+   
+    <nav>
+     
+    <a href="index.html">About</a>
+    <a href="skills.html">Skills</a>
+    <a href="projects.html">Projects</a>
+    <a href="experience.html">Services</a>
+    <a href="contact.html" class="active">Contact</a>
+  </nav>
+  
+<main class="contact-page">
+  
+   
+  
+     <section class="contact-wrap" aria-label="Contact form section">
+    <div class="scroll-track">
+       <div class="scroll-thumb"></div>
+    </div>
+    
+    <form class="contact-form" id="contactForm" action="#" method="post">
+      <header class="contact-header">
+        <h2>Let’s Connect</h2>
+        <p>Have a project? Send message!</p>
+      </header>
+
+      <div class="field">
+        <label for="name">Name</label>
+        <div class="input-wrap">
+          <i class="fa-solid fa-user"></i>
+          <input type="text" id="name" name="name" placeholder="Your full name" required>
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="email">Email</label>
+        <div class="input-wrap">
+          <i class="fa-solid fa-envelope"></i>
+          <input type="email" id="email" name="email" placeholder="your@email.com" required>
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="message">Message</label>
+        <div class="input-wrap">
+          <i class="fa-solid fa-pen-to-square" style="top: 18px; align-self: flex-start;"></i>
+          <textarea id="message" name="message" placeholder="Write your message here..." required></textarea>
+        </div>
+      </div>
+
+      <div class="submit-row">
+        <button type="submit" class="send-btn" id="sendBtn" aria-live="polite">
+          <span class="btn-label">
+            <i class="fa-solid fa-paper-plane"></i>
+            <span>Send Message</span>
+          </span>
+          <span class="btn-loading">
+            <span class="loader" aria-hidden="true"></span>
+            <span>please wait</span>
+          </span>
+        </button>
+      </div>
+    </form>
+  </section>
+  
+</main>
+</body>
+
+  <footer>
+  <div class="profile">
+    <span class="name">
+      Eugine Weks
+    </span>
+    
+    <span class="profession">
+      Software Engineer 
+    </span>
+    </div>
+
+  <div class="social-icons">
+    <a href="https://www.facebook.com/EugineWeks" target="_blank" rel="noopener noreferer"><i class="fa-brands fa-facebook"></i></a>
+    <a href="https://github.com/ejneuro"><i class="fa-brands fa-github"></i></a>
+    <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+  </div>
+ </footer>
+ <script src="assets/js/jquery.min.js"></script>
+ <script src="assets/js/main.js"></script>
+</html>
