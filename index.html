@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+  <link rel="stylesheet" href="assets/css/all.min.css">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="stylesheet" href="assets/css/card.css">
+  <link rel="icon" href="assets/img/quantum.png">
+  <title>Eugine Weks | Portfolio</title>
+  
+</head>
+
+<body>
+  
+  <div class="header">
+    <img class="logo" src="./assets/img/logo.png">
+    <span id="lable">
+      Quantum
+    </span>
+    <i class="fa-regular fa-sun" id="themeToggle"></i>
+   
+  </div>
+  
+   <nav>
+    <a href="index.html" class="active">About</a>
+    <a href="skills.html">Skills</a>
+    <a href="projects.html">Projects</a>
+    <a href="experience.html">Services</a>
+    <a href="contact.html">Contact</a>
+   </nav>
+  
+  <main>
+     <div class="scroll-track">
+       <div class="scroll-thumb"></div>
+    </div>
+    
+
+
+    <div class="popup-container" id="popup">
+    
+     <div class="card">
+      <div class="logo2">
+        <img src="assets/img/profile2.jpg" alt="logo">
+      </div>
+      
+        <span class="info">
+           About</span>
+         
+       <div class="chatme">
+
+         <div class="chat-media">
+           <a href="https://wa.me/0722732675"><i class="fa-regular fa-envelope"></i></a>
+           <span class="media">WhatsApp</span>
+         </div>
+         
+         <div class="chat-media">
+           <a href="https://m.me/"><i class="fab fa-facebook-messenger"></i></a>
+           <span class="media">Messanger</span>
+         </div>
+         
+         <div class="chat-media">
+           <a href="mailto: neuroweks@gmail.com"><i class="devicon-gmail-plain colored"></i></a>
+           <span class="media">Email</span>
+         </div>
+       </div>
+       <button id="close">Close</button>
+    </div>
+   </div>
+  
+ <div class="about-info">
+
+  <section class="intro">
+   <aside>
+    <span class="title">
+      Hi, I'm<br>
+     <b>Eugine Weks</b>
+    </span>
+    <span class="field">Full Stack Developer </span>
+    <br>
+    <p class="bio">
+       I build modern, secure and responsive web apps and systems with AI Intergration.
+       <br>
+      <b class="my-drive">Modern • Responsive • Secure </b>
+    </p>
+    
+   
+   <div class="call-to-action">
+    <button id="getintouch">
+     About Me
+    </button>
+    
+    <button id="downloadcv">
+      Download CV
+    </button>
+   </div>
+   
+    <div class="social-connect">
+      
+<a class="social-media" href="https://www.facebook.com/profile.php/engreugineweks" target="_blank">
+  <i class="fab fa-facebook-f"></i>
+</a>
+
+     <div class="sc">
+     <a class="social-media" href="https://wa.me/254722732675">
+        <i class="fab fa-whatsapp"></i>
+      </a>
+     </div>
+     <a class="social-media" href="https://github.com/ejneuro">
+        <i class="fab fa-github"></i>
+      </a>
+      
+      <a class="social-media" href="https://www.linkedin.com">
+        <i class="fab fa-linkedin"></i>
+      </a>
+      
+    </div>
+   </aside>
+  </section>
+ <div class="photo-container">
+     <div class="circle-frame"></div>
+     <img src="./assets/img/new-prof.png" alt="Eugine Weks" class="profile-img">
+    </div>
+ </div>
+  </main>
+ 
+</body>
+
+  <footer>
+  <div class="profile">
+    <span class="name">
+      Eugine Weks
+    </span>
+    
+    <span class="profession">
+      Software Engineer 
+    </span>
+  </div>
+
+  <div class="producer">
+    <img class="f-logo" src="assets/img/logo.png">
+      Quantum
+  </div>
+ </footer>
+ <script src="assets/js/jquery.min.js"></script>
+ <script src="assets/js/main.js"></script>
+ <script>
+   let popup = document.getElementById("popup");
+let popupbtn = document.getElementById("getintouch");
+
+popupbtn.addEventListener('click', function() {
+  popup.style.display = "block";
+});
+
+document.getElementById("close").addEventListener('click', function() {
+  popup.style.display = "none";
+});
+ </script>
+</html>
