@@ -1,0 +1,275 @@
+    :root{
+      --primary: dodgerblue;
+      --primary-deep: #0b72d9;
+      --bg: #f5f9ff;
+      --surface: rgba(255,255,255,0.9);
+      --text: #0d1726;
+      --muted: #5d6b82;
+      --border: rgba(30, 90, 160, 0.12);
+      --shadow: 0 20px 60px rgba(30, 80, 150, 0.14);
+      --radius: 22px;
+    }
+
+    .contact-wrap{
+      position: relative;
+      width: 100%;
+      animation: rise .8s ease both;
+      display: grid;
+      place-items: center;
+      margin: auto;
+      background:
+        radial-gradient(circle at 15% 20%, rgba(30,144,255,0.16), transparent 28%),
+        radial-gradient(circle at 85% 80%, rgba(30,144,255,0.12), transparent 24%),
+        linear-gradient(180deg, #fafdff 0%, #eef6ff 100%);
+      font-family: "Inter", sans-serif;
+      color: var(--text);
+    }
+
+    .contact-form{
+      position: relative;
+      display: grid;
+      gap: 18px;
+      padding: clamp(24px, 4vw, 40px);
+      margin-top: 30px;
+      margin-bottom: 30px;
+      border-radius: var(--radius);
+      background: var(--surface);
+      border: 1px solid rgba(255,255,255,0.7);
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(16px);
+      overflow: hidden;
+    }
+
+    .contact-form::before{
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(135deg, rgba(30,144,255,0.10), transparent 38%),
+        linear-gradient(315deg, rgba(255,255,255,0.45), transparent 45%);
+      pointer-events: none;
+    }
+
+    .contact-header{
+      position: relative;
+      text-align: center;
+      margin-bottom: 6px;
+      animation: fadeUp .7s ease both;
+    }
+
+    .contact-header h2{
+      font-family: "Space Grotesk", sans-serif;
+      font-size: clamp(2rem, 4vw, 3rem);
+      line-height: 0.95;
+      letter-spacing: -0.04em;
+      margin-bottom: 10px;
+    }
+
+    .contact-header p{
+      color: var(--muted);
+      font-size: 0.98rem;
+      max-width: 44ch;
+      margin: 0 auto;
+    }
+
+    .field{
+      position: relative;
+      animation: fadeUp .7s ease both;
+    }
+
+    .field:nth-of-type(2){ animation-delay: .08s; }
+    .field:nth-of-type(3){ animation-delay: .16s; }
+    .field:nth-of-type(4){ animation-delay: .24s; }
+    .submit-row{ animation: fadeUp .7s ease both; animation-delay: .32s; }
+
+    .field label{
+      display: block;
+      margin-bottom: 9px;
+      font-size: 0.92rem;
+      font-weight: 600;
+      color: var(--text);
+    }
+
+    .input-wrap{
+      position: relative;
+      display: flex;
+      align-items: center;
+    }
+
+    .input-wrap i{
+      position: absolute;
+      left: 16px;
+      font-size: 1rem;
+      color: var(--primary);
+      opacity: 0.95;
+      pointer-events: none;
+    }
+
+    .contact-form input,
+    .contact-form textarea{
+      width: 100%;
+      border: 1px solid var(--border);
+      background: rgba(255,255,255,0.82);
+      color: var(--text);
+      padding: 15px 16px 15px 46px;
+      border-radius: 16px;
+      font: inherit;
+      outline: none;
+      transition: border-color .25s ease, box-shadow .25s ease, transform .25s ease, background .25s ease;
+    }
+
+    .contact-form textarea{
+      min-height: 160px;
+      resize: vertical;
+      padding-top: 16px;
+      line-height: 1.6;
+    }
+
+    .contact-form input::placeholder,
+    .contact-form textarea::placeholder{
+      color: #90a0b8;
+    }
+
+    .contact-form input:focus,
+    .contact-form textarea:focus{
+      border-color: rgba(30,144,255,0.45);
+      box-shadow: 0 0 0 5px rgba(30,144,255,0.12);
+      background: #fff;
+      transform: translateY(-1px);
+    }
+
+    .submit-row{
+      display: flex;
+      justify-content: center;
+      margin-top: 6px;
+    }
+
+    .send-btn{
+      --btn-h: 56px;
+      border: 0;
+      min-width: 220px;
+      height: var(--btn-h);
+      border-radius: 999px;
+      background: linear-gradient(180deg, var(--primary) 0%, var(--primary-deep) 100%);
+      color: #fff;
+      font-family: "Space Grotesk", sans-serif;
+      font-size: 1rem;
+      font-weight: 700;
+      letter-spacing: 0.01em;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      cursor: pointer;
+      box-shadow:
+        0 14px 30px rgba(30,144,255,0.25),
+        inset 0 1px 0 rgba(255,255,255,0.25);
+      transition: transform .2s ease, box-shadow .25s ease, filter .25s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .send-btn::before{
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(120deg, transparent 20%, rgba(255,255,255,0.25) 50%, transparent 80%);
+      transform: translateX(-120%);
+      transition: transform .7s ease;
+    }
+
+    .send-btn:hover{
+      transform: translateY(-2px) scale(1.01);
+      box-shadow:
+        0 18px 38px rgba(30,144,255,0.32),
+        inset 0 1px 0 rgba(255,255,255,0.28);
+      filter: saturate(1.05);
+    }
+
+    .send-btn:hover::before{
+      transform: translateX(120%);
+    }
+
+    .send-btn:active{
+      transform: translateY(0) scale(0.99);
+    }
+
+    .btn-label,
+    .btn-loading{
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      transition: opacity .2s ease, transform .2s ease;
+    }
+
+    .btn-loading{
+      position: absolute;
+      opacity: 0;
+      transform: translateY(6px);
+      pointer-events: none;
+    }
+
+    .loader{
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      border: 2.5px solid rgba(255,255,255,0.35);
+      border-top-color: #fff;
+      animation: spin .8s linear infinite;
+    }
+
+    .send-btn.is-loading{
+      pointer-events: none;
+      min-width: 240px;
+      background: linear-gradient(180deg, #238fff 0%, #0a6fd4 100%);
+    }
+
+    .send-btn.is-loading .btn-label{
+      opacity: 0;
+      transform: translateY(-6px);
+    }
+
+    .send-btn.is-loading .btn-loading{
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @keyframes spin{
+      to{ transform: rotate(360deg); }
+    }
+
+    @keyframes rise{
+      from{
+        opacity: 0;
+        transform: translateY(24px) scale(.98);
+      }
+      to{
+        opacity: 1;
+        transform: translateY(0) scale(1);
+      }
+    }
+
+    @keyframes fadeUp{
+      from{
+        opacity: 0;
+        transform: translateY(18px);
+      }
+      to{
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media (max-width: 640px){
+      .contact-form{
+        padding: 22px 18px;
+        border-radius: 20px;
+      }
+
+      .send-btn{
+        width: 100%;
+        min-width: 0;
+      }
+    }
