@@ -2,6 +2,7 @@
   --primary-color: deepskyblue;
   --secondary-color: dodgerblue;
   --surface: rgba(255,255,255,0.9);
+  --gradient: linear-gradient(to right, #4facfe, #00f2fe); 
       --text: #0d1726;
       --muted: #5d6b82;
       --border: rgba(30, 90, 160, 0.12);
@@ -69,7 +70,7 @@ body.dark .contact-form{
 #lable{
   color: var(--primary-color);
   font-weight: bold;
-  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
   margin-left: 5px;
 }
 
@@ -193,8 +194,10 @@ main{
 
 
 .field{
-  font-weight: bold;
+  font-weight: ;
   margin-top: 8px;
+  color: green;
+  font-style: italic;
 }
 p{
   line-height: 1.5;
