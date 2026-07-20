@@ -16,7 +16,6 @@ body{
   margin: 0;
   background-color: #ffffff;
   width: 100%;
-  height: auto;
   overflow-x: hidden;
   max-width: 1000px;
   transition: background 0.3s, color 0.3s;
@@ -53,11 +52,17 @@ body.dark .contact-form{
   background: #333;
 }
 
+
+
+
 .header{
   border-bottom: 1px solid #eee;
   padding: 10px 15px;
   position: sticky;
   margin: 0;
+  top: 0;
+  z-index: 1000;
+  background: #fff;
 }
 
 .logo{
@@ -113,6 +118,7 @@ main{
   overflow: hidden;
   margin: 0;
   width: 100%;
+  flex: 1;
 }
 
 @media (max-width: 1000px){
@@ -194,7 +200,7 @@ main{
 
 
 .field{
-  font-weight: ;
+  
   margin-top: 8px;
   color: green;
   font-style: italic;
